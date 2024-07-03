@@ -29,6 +29,7 @@
 #include "commands/payload/Commands.h"
 #include "commands/session-management/Commands.h"
 #include "commands/storage/Commands.h"
+#include "commands/version/Commands.h"
 
 #include <zap-generated/cluster/Commands.h>
 
@@ -50,6 +51,7 @@ int main(int argc, char * argv[])
     registerCommandsSubscriptions(commands, &credIssuerCommands);
     registerCommandsStorage(commands);
     registerCommandsSessionManagement(commands, &credIssuerCommands);
+    registerCommandsVersion(commands, &credIssuerCommands);
 
     return commands.Run(argc, argv);
 }

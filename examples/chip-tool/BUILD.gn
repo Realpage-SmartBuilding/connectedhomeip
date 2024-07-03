@@ -84,6 +84,7 @@ static_library("chip-tool-utils") {
     "commands/session-management/CloseSessionCommand.cpp",
     "commands/session-management/CloseSessionCommand.h",
     "commands/storage/StorageManagementCommand.cpp",
+    "commands/version/VersionCommand.cpp",
   ]
 
   deps = [ "${chip_root}/src/app:events" ]
